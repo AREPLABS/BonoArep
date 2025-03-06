@@ -41,8 +41,8 @@ CRUD-AREP es una aplicación web que permite la gestión de propiedades inmobili
 ## 🔧 **Configuración y Despliegue**
 ### **1️⃣ Clonar el Repositorio**
 ```bash
-git clone https://github.com/usuario/CRUD-AREP.git
-cd CRUD-AREP
+git clone https://github.com/AREPLABS/BonoArep.git
+cd tallerjpa
 ```
 
 ### **2️⃣ Configurar la Base de Datos**
