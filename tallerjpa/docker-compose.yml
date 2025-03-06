@@ -15,10 +15,11 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root --password=rootpassword || exit 1"]
+      interval: 30s  # Espera 30 segundos antes de la primera verificación
+      timeout: 10s   # Espera 10 segundos para recibir respuesta antes de fallar
+      retries: 10    # Intenta 10 veces antes de marcarlo como "unhealthy"
+      start_period: 40s # Espera 40s antes de comenzar a hacer health checks
 
   spring-app:
     build: .
