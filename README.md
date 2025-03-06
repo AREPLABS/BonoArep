@@ -10,7 +10,8 @@ CRUD-AREP es una aplicación web que permite la gestión de propiedades inmobili
 ✅ Eliminación de propiedades.  
 ✅ Interfaz amigable y responsive con Bootstrap.  
 ✅ API REST desarrollada con Spring Boot.  
-✅ Persistencia de datos con MySQL y JPA/Hibernate.
+✅ Persistencia de datos con MySQL y JPA/Hibernate.  
+✅ Contenedorización con Docker para facilitar el despliegue.
 
 ## 🏗 **Arquitectura del Proyecto**
 
@@ -31,18 +32,23 @@ CRUD-AREP es una aplicación web que permite la gestión de propiedades inmobili
 &nbsp;&nbsp;&nbsp;&nbsp;📌 `PropertyTest.java` - Pruebas unitarias para la entidad Propiedad.  
 &nbsp;&nbsp;&nbsp;&nbsp;📌 `PropertyControllerTest.java` - Pruebas para el controlador de propiedades.  
 
+📂 **Docker**  
+&nbsp;&nbsp;&nbsp;&nbsp;📌 `Dockerfile` - Archivo para construir la imagen Docker.  
+&nbsp;&nbsp;&nbsp;&nbsp;📌 `docker-compose.yml` - Archivo para orquestar los contenedores de la aplicación y la base de datos.
+
 ## 🛠 **Tecnologías Utilizadas**
 - **Backend:** Spring Boot, Java, JPA/Hibernate.  
 - **Base de Datos:** MySQL.  
 - **Frontend:** HTML, CSS, Bootstrap, JavaScript.  
 - **API REST:** Spring Boot + JSON.  
 - **Gestión de Dependencias:** Maven.  
+- **Contenedorización:** Docker y Docker Compose.
 
 ## 🔧 **Configuración y Despliegue**
 ### **1️⃣ Clonar el Repositorio**
 ```bash
-git clone https://github.com/AREPLABS/BonoArep.git
-cd tallerjpa
+git clone https://github.com/usuario/CRUD-AREP.git
+cd CRUD-AREP
 ```
 
 ### **2️⃣ Configurar la Base de Datos**
@@ -55,10 +61,11 @@ spring.datasource.password=TU_CONTRASEÑA
 spring.jpa.hibernate.ddl-auto=update
 ```
 
-### **3️⃣ Ejecutar la Aplicación**
+### **3️⃣ Construir y Ejecutar con Docker**
 ```bash
-mvn spring-boot:run
+docker-compose up --build
 ```
+Esto iniciará la aplicación junto con la base de datos MySQL en contenedores Docker.
 
 ### **4️⃣ Abrir en el Navegador**
 La aplicación estará disponible en:  
@@ -73,7 +80,7 @@ La aplicación estará disponible en:
 ## 💡 **Mejoras Futuras**
 - Implementar autenticación de usuarios.
 - Agregar filtros avanzados para búsqueda de propiedades.
-- Desplegar la aplicación en AWS.
+- Desplegar la aplicación en AWS utilizando contenedores Docker.
 
 📌 **Autor:** [Tu Nombre]  
 📆 **Fecha:** [Año]  
