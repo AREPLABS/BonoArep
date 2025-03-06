@@ -33,6 +33,9 @@ public class Propiedad {
     @Column(nullable = false) 
     private String description; 
 
+    public Propiedad(){
+    }
+
     public Propiedad(String address,Double price, Double size, String description){
         this.address = address;
         this.price=price;
