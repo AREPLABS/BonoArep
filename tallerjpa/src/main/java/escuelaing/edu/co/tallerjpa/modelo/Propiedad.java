@@ -18,19 +18,19 @@ import lombok.Setter;
 public class Propiedad {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; 
 
-    @Column(name = "address") 
+    @Column(nullable = false)
     private String address;
 
-    @Column(name = "price") 
+    @Column(nullable = false)
     private Double price;
 
-    @Column(name = "size") 
+    @Column(nullable = false)
     private Double size;
 
-    @Column(name = "description") 
+    @Column(nullable = false) 
     private String description; 
 
     public Propiedad(String address,Double price, Double size, String description){

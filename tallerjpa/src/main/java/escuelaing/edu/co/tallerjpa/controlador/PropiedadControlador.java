@@ -16,7 +16,7 @@ public class PropiedadControlador {
     private TallerjpaServicio propiedadServicio;
 
     @GetMapping
-    public List<Propiedad> getAllPropiedades() {
+    public Iterable<Propiedad> getAllPropiedades() {
         return propiedadServicio.findAll();
     }
 
